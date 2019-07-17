@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Stock Prediction APP</title>
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+ <p><h1><font color="#6699CC"> Stock Prediction</h1> </font></p>
+</body>
+
+<body>
+  <div style="height:350px;width:1650px;border:solid 2px blue;overflow:scroll;overflow-x:hidden;overflow-y:scroll;">
+
+ <!-- <div class="login"> -->
+
+  <!-- <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet"> -->
+
+  <!-- Custom styles for this template -->
+  <!-- <link href="{{ url_for('static', filename='narrow-jumbotron.css') }}" rel="stylesheet"> -->
+<!-- </head> -->
+
+<body>
+
+    <!-- <div class="jumbotron">
+      <p class="lead">Purchase The Product for only $199. Every 3 Months</p>
+      <form action="{{ url_for('pay') }}" method="POST">
+        <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="{{ pub_key }}"
+          data-amount="19900"
+          data-name="Demo Site"
+          data-description="Widget"
+          data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+          data-locale="auto">
+        </script>
+      </form>
+    </div> -->
+<!--
+    <footer class="footer">
+      <p>&copy; Store 2017</p>
+    </footer> -->
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict_bitcoin')}}"method="post">
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict Bitcoin. Purchase The Basic Model for only $10 Each Use</button>
+        <div class="jumbotron">
+          <form action="{{ url_for('pay') }}" method="POST">
+            <script
+              src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="pk_live_2pO0yUvt9xKyjAo9rca8Vkc600FWtgJuqZ"
+              data-amount="1000"
+              data-name="Demo Site"
+              data-description="Widget"
+              data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+              data-locale="auto">
+            </script>
+          </form>
+        </div>
+      </form>
+      <br>
+   <form action="{{ url_for('predict_ethereum')}}"method="post">
+       <button type="submit" class="btn btn-primary btn-block btn-large">Predict Etherum. Purchase The Basic Model for only $10 Each Use</button>
+       <div class="jumbotron">
+         <form action="{{ url_for('pay') }}" method="POST">
+           <script
+             src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+             data-key="pk_live_2pO0yUvt9xKyjAo9rca8Vkc600FWtgJuqZ"
+             data-amount="1000"
+             data-name="Demo Site"
+             data-description="Widget"
+             data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+             data-locale="auto">
+           </script>
+         </form>
+       </div>
+   </form>
+  <br>
+  <form action="{{ url_for('predict_APPLE')}}"method="post">
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict Apple. Purchase The Basic Model for only $10 Each Use</button>
+      <div class="jumbotron">
+        <form action="{{ url_for('pay') }}" method="POST">
+          <script
+            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="pk_live_2pO0yUvt9xKyjAo9rca8Vkc600FWtgJuqZ"
+            data-amount="1000"
+            data-name="Demo Site"
+            data-description="Widget"
+            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+            data-locale="auto">
+          </script>
+        </form>
+      </div>
+  </form>
+ <br>
+ <form action="{{ url_for('predict_MSFT')}}"method="post">
+     <button type="submit" class="btn btn-primary btn-block btn-large">Predict Microsoft. Purchase The Basic Model for only $10 Each Use</button>
+     <div class="jumbotron">
+       <form action="{{ url_for('pay') }}" method="POST">
+         <script
+           src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+           data-key="pk_live_2pO0yUvt9xKyjAo9rca8Vkc600FWtgJuqZ"
+           data-amount="1000"
+           data-name="Demo Site"
+           data-description="Widget"
+           data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+           data-locale="auto">
+         </script>
+       </form>
+     </div>
+ </form>
+</div>
+</div>
+<body>
+  <p><h1><font color="#6699CC"> RESULTS</h1> </font></p>
+  <font color="#FF33CC"> {{ prediction_text }} </font>
+</body>
+</div>
+</body>
+</html>
